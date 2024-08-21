@@ -11,3 +11,10 @@ connectDB()        //async await return promise which is then handle through the
 .catch((error) => {
     console.log(error, "Server is not connected");
 })
+
+//WE CAN DIRECTLY USE THIS BELOW METHOD INSTEAD OF SEGREGATING THE ROUTES 
+//app.post("/api/v2/register",upload.fields([{name: "avatar"},{name: "coverImage"}]),registerUser);
+
+//HERE WE USE THE PRODUCTION BASED STANDARD PRACTICE WHERE WE SEPARATE ROUTES AND USE THAT app.use() IN app.js FILE
+// import router from "./routes/user.route.js";
+// app.use("/api/v2",router)
